@@ -17,7 +17,6 @@ select = [
     "PLC",
     "PLE",
     "Q",
-    "T",
     "W",
     "YTT",
     "RET",

@@ -23,5 +23,7 @@ async def new_chat_member(update: ChatMemberUpdated) -> Any:
 
 
 if __name__ == "__main__":
-    # https://github.com/aiogram/aiogram/blob/dev-2.x/aiogram/types/update.py#L47
+    # Here you need to specify all types of updates that the bot should receive.
+    # To combine updates use + operator, for example:
+    # AllowedUpdates.MESSAGE + Allowedupdates.CALLBACK_QUERY + AllowedUpdates.CHAT_MEMBER
     executor.start_polling(dp, allowed_updates=AllowedUpdates.CHAT_MEMBER)

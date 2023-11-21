@@ -27,10 +27,10 @@ def main() -> None:
         no_updates=True,  # We don't need to handle incoming updates by client
     )
 
-    dp = Dispatcher()
+    dp = Dispatcher(client=client)
     dp.startup.register(startup)
     dp.shutdown.register(shutdown)
-    return dp.run_polling(bot, client=client)
+    return dp.run_polling(bot)
 
 
 if __name__ == "__main__":
